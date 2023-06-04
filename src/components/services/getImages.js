@@ -15,4 +15,3 @@ const getImages = async (query, page) => {
 };
 
 export default getImages;
-
