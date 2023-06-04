@@ -36,7 +36,7 @@ const Modal = ({ modalClose, largeImage }) => {
 
 Modal.propTypes = {
   modalClose: PropTypes.func,
-  largeImage: PropTypes.string
+  largeImage: PropTypes.string,
 };
 
 export default Modal;

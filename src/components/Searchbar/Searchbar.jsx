@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import css from './Searchbar.module.css'
-import { MdSearch } from "react-icons/md";
+import css from './Searchbar.module.css';
+import { MdSearch } from 'react-icons/md';
 
-const Searchbar = ({onSubmit}) => {
-  const [search, setSearch] = useState('')
+const Searchbar = ({ onSubmit }) => {
+  const [search, setSearch] = useState('');
 
   const handleChange = e => {
     setSearch(e.target.value);
@@ -21,9 +21,11 @@ const Searchbar = ({onSubmit}) => {
   return (
     <div className={css.searchbarWrap}>
       <header className={css.searchbar}>
-        <form className={css.form} onSubmit={(e) => handleSubmit(e)}>
+        <form className={css.form} onSubmit={e => handleSubmit(e)}>
           <button type="submit" className={css.button}>
-            <span className={css.buttonLabel}><MdSearch /></span>
+            <span className={css.buttonLabel}>
+              <MdSearch />
+            </span>
           </button>
 
           <input
@@ -33,7 +35,7 @@ const Searchbar = ({onSubmit}) => {
             autoFocus
             placeholder="Search images and photos"
             value={search}
-            onChange={(e) => handleChange(e)}
+            onChange={e => handleChange(e)}
           />
         </form>
       </header>
