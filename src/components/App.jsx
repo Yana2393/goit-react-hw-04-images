@@ -21,6 +21,8 @@ export const App = () => {
       if (!query || !page) return;
       setLoading(true);
 
+      
+
       getImages(query, page)
         .then(({ hits: photos, totalHits: total_results }) => {
           if (!photos.length) {
@@ -39,7 +41,7 @@ export const App = () => {
         .finally(() => {
           setLoading(false);
         });
-    }, [query, page]);
+    }, [query, page, error, isEmpty]);
 
     const onSubmit = query => {
       if (setQuery === query) {
